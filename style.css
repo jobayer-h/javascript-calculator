@@ -1,0 +1,33 @@
+.calculator{
+    height: 500px;
+    width: 300px;
+    background-color: aquamarine;
+    border: 10px solid black;
+    margin:30px auto;
+}
+.display{
+    border: 1px solid black;
+    height: 120px;
+    text-align: right;
+    background-color: grey;
+    border-bottom: 10px solid black;
+}
+
+.btn{
+    margin: 1px;
+    padding: 20px;
+    font-size: 20px;
+}
+.buttons{
+    text-align: center;
+}
+#display-1 , #display-2{
+    background-color: gray;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    font-size: 40px;
+    border: none;
+    color: honeydew;
+    padding: 0 10px;
+}
