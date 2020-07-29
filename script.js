@@ -1,21 +1,19 @@
-var display = '';
-    function btnHandelar(num){
-        const btnText = document.getElementById(num).innerText;
-        display = display + btnText;
-        document.getElementById('display-1').value = display;
-        
-    }
-    function calculate() {
-        displayResult = eval(document.getElementById('display-1').value);
-        document.getElementById('display-2').value = displayResult;
-        clearDisplay(true);
-    }
-    function clearDisplay(id) {
-        display = '';
-        if (id == true) {
-            document.getElementById('display-1').value = 0;
-        }else{
-            document.getElementById('display-1').value = 0;
-            document.getElementById('display-2').value = 0;
-        }
-    }
+function getButtonValue(id) {
+    const value =document.getElementById(id).innerText;
+    document.getElementById('display1').innerText += value;
+  }
+function calculate() {
+    const result = eval(document.getElementById('display1').innerText);
+    document.getElementById('display2').innerText = result;
+    document.getElementById('display1').innerText = '';
+  }
+function clearDisplay(id) {
+    if (id ==true) {
+      document.getElementById('display1').innerText = '';
+      document.getElementById('display2').innerText = '';
+    } else {
+    const currentDisplay= document.getElementById('display1').innerText;
+    const newDisplay = currentDisplay.slice(0,-1);
+    document.getElementById('display1').innerText = newDisplay;
+    }  
+  }
